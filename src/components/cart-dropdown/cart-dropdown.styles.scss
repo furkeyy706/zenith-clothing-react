@@ -1,6 +1,6 @@
 .cart-dropdown-container {
   position: absolute;
-  width: 300px; // Changed from 240px to have the button all on one line
+  width: 240px;
   height: 340px;
   display: flex;
   flex-direction: column;
@@ -17,20 +17,27 @@
   }
 
   .cart-items {
-    height: 100%; // Filled the height to match the container and fix button spacing
+    height: 80%;
     display: flex;
     flex-direction: column;
-    overflow: scroll;
+    // overflow: scroll;
+    overflow-y: scroll;
   }
 
   button {
     margin-top: auto;
+    font-size: 12px;
   }
 }
 
 ::-webkit-scrollbar {
-  // Remove scrollbar
-  display: none;
+  background: white;
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(110, 109, 109);
+  border-radius: 5px;
 }
 
 // !!!!! çalışan kodlar
@@ -57,11 +64,10 @@
 //     height: 240px;
 //     display: flex;
 //     flex-direction: column;
-//     overflow: auto;
+//     overflow: scroll;
 //   }
 
 //   button {
 //     margin-top: auto;
-//     font-size: 12px;
 //   }
 // }

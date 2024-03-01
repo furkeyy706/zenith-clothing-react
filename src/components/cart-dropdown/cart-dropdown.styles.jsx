@@ -1,4 +1,12 @@
-.cart-dropdown-container {
+import styled from 'styled-components';
+
+import {
+  BaseButton,
+  GoogleSignInButton,
+  InvertedButton,
+} from '../button/button.styles';
+
+export const CartDropdownContainer = styled.div`
   position: absolute;
   width: 240px;
   height: 340px;
@@ -11,34 +19,35 @@
   right: 40px;
   z-index: 5;
 
-  .empty-message {
-    font-size: 18px;
-    margin: 50px auto;
-  }
-
-  .cart-items {
-    height: 80%;
-    display: flex;
-    flex-direction: column;
-    // overflow: scroll;
-    overflow-y: scroll;
-  }
-
-  button {
+  ${BaseButton}, ${GoogleSignInButton}, ${InvertedButton} {
     margin-top: auto;
     font-size: 12px;
   }
-}
 
-::-webkit-scrollbar {
-  background: white;
-  width: 7px;
-}
+  ::-webkit-scrollbar {
+    background: white;
+    width: 7px;
+  }
 
-::-webkit-scrollbar-thumb {
-  background: rgb(110, 109, 109);
-  border-radius: 5px;
-}
+  ::-webkit-scrollbar-thumb {
+    // background: rgb(110, 109, 109);
+    background: rgb(34, 117, 211);
+    border-radius: 5px;
+  }
+`;
+
+export const EmptyMessage = styled.span`
+  font-size: 18px;
+  margin: 50px auto;
+`;
+
+export const CartItems = styled.div`
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  // overflow: scroll;
+  overflow-y: scroll;
+`;
 
 // !!!!! çalışan kodlar
 
